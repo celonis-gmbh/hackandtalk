@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>HackAndTalk</title>
+</head>
+<body>
+<h1>HackAndTalk</h1>
+
+
+<div style="clear: both; width: 100%; position: relative;">
+<div style="float: right;width: 50%">
+<h2>Parser output</h2>
+<pre style="width: 95%; white-space: pre-wrap" id="parseroutput"></pre>
+</div>
+
+<div style="float: left; width: 50%">
+<h2>Query input</h2>
+<!--
+<button id="query1">dataset 1</button>
+<button id="query2">dataset 2</button>
+<button id="query3">dataset 3</button>
+<button id="query4">dataset 4</button>
+-->
+<h4>Available columns</h4>
+<div id="metadata"></div>
+<br/>
+<br/>
+<textarea id="queryInput" style="width: 90%;height:200px">
+</textarea>
+<br/>
+
+<h2>Query result</h2>
+<table id="output">
+</table>
+</div>
+
+</div>
+
+
+<script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="parser.js"></script>
+<script type="text/javascript" src="engine.js"></script>
+<script type="text/javascript" src="tests.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+pegjs  -e hatparser parser/hat.pegjs lib/parser.js
