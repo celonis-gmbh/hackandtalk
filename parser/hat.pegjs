@@ -86,7 +86,7 @@ value =
 
 
 expr =
-  e: ( _ value ) )
+  e: ( _ value )
   { return e[1]; }
 
 

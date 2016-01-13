@@ -58,7 +58,16 @@
 }
 
 
-// 1) the first expression is taken as the "root" of the parser
+// our goal: parse and execute the following query
+// rows(FundCode)cells(count(1))
+// How to do it:
+// write rules on how to process the token stream and parse expressions
+// general syntax: [rulename] = [ parseExpression ] { javascript return code }
+
+// most simple case: a static string
+start = "SAMPLE"
+
+// 1) the first expression is taken as the "root" rule of the parser
 /*
 start = 
   "rows" _ lparen _ rparen _ "cells" _ lparen _ rparen _
@@ -194,6 +203,7 @@ agg_expr =
 /*
 to create a query object, the hat engine provides a function piv.qry(rows, cells)
 */
+/*
 start = 
   qry: (
   ( r: ("rows" _ lparen _ ( res: ( expr ( ( _ comma _ ees: expr ) { return ees; } ) * ) { return exprlist(res); } )_ rparen _ ) { return r[4]; } )
@@ -209,7 +219,7 @@ expr =
 agg_expr =
  a: agg_name _ lparen _  e: expr _ rparen
  { return piv.agg(a, e); }
-
+*/
 
 
 
